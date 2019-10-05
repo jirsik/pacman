@@ -71,7 +71,7 @@ class Pacman {
             this.stage.removeEntity(collisionDetectionResult);
             break;
           case "bomb":
-            if (Math.random() < 0.2) {
+            if (Math.random() < 0.5) {
               this.stage.removeEntity(collisionDetectionResult);
               this.element.className = "entity entity--pac entity--tomb";
               this.death = true;
