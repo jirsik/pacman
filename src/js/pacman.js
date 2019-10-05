@@ -14,7 +14,7 @@ class Pacman {
   render() {
     this.element = document.createElement("div");
     this.element.className = "entity entity--pac pacboy-active-light";
-    this.element.innerHTML = `Franta ${this.score}`;
+    this.element.innerHTML = `Pacman ${this.score}`;
   }
 
   mount(parent) {
