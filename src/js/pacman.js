@@ -5,7 +5,7 @@ class Pacman {
     this.lastXpos = 0;
     this.lastYpos = 0;
     this.mouth = 0;
-    this.direction = 0;
+    this.direction = 'right';
     this.stage = stage;
     this.score = 0;
     this.death = false;
