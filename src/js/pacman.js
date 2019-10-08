@@ -94,6 +94,6 @@ class Pacman {
     this.element.style.top = `${this.ypos * TILE_SIZE}px`;
     this.element.style.backgroundPositionX = `${this.mouth}px`;
     this.element.style.backgroundPositionY = `${this.direction}px`;
-    this.element.innerHTML = `Franta ${this.score}`;
+    this.element.innerHTML = `Pacman ${this.score}`;
   }
 }

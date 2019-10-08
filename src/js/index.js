@@ -1,4 +1,5 @@
 const TILE_SIZE = 85;
+const ROBOT_SPEED = 200;
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = document.querySelector('#app');
@@ -29,6 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
+  const robot = new Robot(stage, pacman);
+  robot.mount();
+  
   document.addEventListener('keydown', (event) => {
     if(event.key === 'ArrowRight'){
       pacman.move('right');

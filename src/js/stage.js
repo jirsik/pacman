@@ -3,6 +3,7 @@ class Stage {
         this.width = width;
         this.height = height;
         this.entityArray = [];
+        this.wallArray = [];
     }
 
     render() {

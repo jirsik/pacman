@@ -16,6 +16,9 @@ class Entity {
         this.render();
         parent.element.appendChild(this.element);
         parent.entityArray.push(this);
+        if (this.type === 'wall') {
+            parent.wallArray.push(this);
+        }
     }
 
     unMount(entityArray) {
