@@ -1,10 +1,10 @@
 const TILE_SIZE = 85;
-const ROBOT_SPEED = 200;
+const ROBOT_SPEED = 500;
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = document.querySelector('#app');
   const stageX = 32; // 32max
-  const stageY = 32; // 32max
+  const stageY = 16; // 32max
 
   const stage = new Stage(stageX,stageY);
   stage.mount(app);
@@ -30,8 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
-  const robot = new Robot(stage, pacman);
-  robot.mount();
+  const robot1 = new Robot(stage, pacman, stage.width - 2, stage.height - 2);
+  robot1.mount();
+
+  const robot2 = new Robot(stage, pacman, 0, stage.height - 2);
+  robot2.mount();
+
+  const robot3 = new Robot(stage, pacman, stage.width - 2, 0);
+  robot3.mount();
   
   document.addEventListener('keydown', (event) => {
     if(event.key === 'ArrowRight'){

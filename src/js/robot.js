@@ -1,7 +1,7 @@
 class Robot {
-    constructor(stage, pacman) {
-      this.xpos = stage.width - 2;
-      this.ypos = stage.height - 2;
+    constructor(stage, pacman, x, y) {
+      this.xpos = x; //stage.width - 2;
+      this.ypos = y; //stage.height - 2;
       this.x;
       this.y;
       this.found = false;
@@ -27,7 +27,7 @@ class Robot {
       this.render();
       this.stage.element.appendChild(this.element);
       this.update();
-      this.timer = setInterval(()=> this.move(), ROBOT_SPEED );
+      setTimeout(() => {this.timer = setInterval(()=> this.move(), ROBOT_SPEED );}, 1000);
     }
     
     isOutOfStage(x, y) {
